@@ -1,0 +1,28 @@
+version: "3"
+services:
+    frontend:
+        container_name: countries_project
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        image: nadav/countries_web
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./client:/app
+    backend:
+        container_name: countries_server
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: nadav/countries_server
+        ports:
+            - "4000:4000"
+        volumes:
+            - ./:/app
+    redis:
+        image: redis:4.0.7
+        ports:
+            - "6379:6379"
+        command: ["redis-server", "--appendonly", "yes"]
+        hostname: redis

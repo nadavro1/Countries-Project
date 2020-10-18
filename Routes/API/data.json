@@ -1,0 +1,24 @@
+{
+    "continents":[
+        {
+            "code":"af",
+            "name":"Africa" 
+        },
+        {
+            "code":"am",
+            "name":"Americas"
+        },
+        {
+            "code":"as",
+            "name":"Asia"
+        },
+        {
+            "code":"eu",
+            "name":"Europe"
+        },
+        {
+            "code":"oc",
+            "name":"Oceania"
+        }
+    ]
+}
